@@ -17,13 +17,10 @@ const Contact = () => {
 
   const update = (event)=>{
     const {name,value} = event.target;
-    setData((prevdata)=>{
-      // console.log(prevdata);
-      // console.log([name])
-      return{
-        ...prevdata,
-        [name] : value,
-        
+    setData((prevData)=>{
+      return {
+        ...prevData,
+        [name]:value
       };
     });
   }
@@ -57,19 +54,19 @@ const Contact = () => {
             <form>
               <div className="mb-3">
                 <label htmlFor="exampleFormControlInput1" className="form-label">Full Name </label>
-                <input type="text" className="form-control myform" id="exampleFormControlInput1" name="fullname" value={data.fullname} required placeholder="Enter your name" />
+                <input type="text" onChange={update} className="form-control myform" id="exampleFormControlInput1" name="fullname" value={data.fullname} required placeholder="Enter your name" />
               </div>
               <div className="mb-3">
                 <label htmlFor="exampleFormControlInput1" className="form-label">Email address</label>
-                <input type="email" className="form-control myform" id="exampleFormControlInput1" name="email" value={data.email} required placeholder="Enter your mail" />
+                <input type="email" onChange={update} className="form-control myform" id="exampleFormControlInput1" name="email" value={data.email} required placeholder="Enter your mail" />
               </div>
               <div className="mb-3">
                 <label htmlFor="exampleFormControlInput1" className="form-label">Education</label>
-                <input type="text" className="form-control myform" id="exampleFormControlInput1" name="education" value={data.education} required placeholder="Enter your education" />
+                <input type="text" onChange={update} className="form-control myform" id="exampleFormControlInput1" name="education" value={data.education} required placeholder="Enter your education" />
               </div>
               <div className="mb-3">
                 <label htmlFor="exampleFormControlTextarea1" className="form-label">Message</label>
-                <textarea className="form-control myform" id="exampleFormControlTextarea1" rows="3" required name="message" value={data.message} ></textarea>
+                <textarea onChange={update} className="form-control myform" id="exampleFormControlTextarea1" rows="3" required name="message" value={data.message} ></textarea>
               </div>
               <button className="btn btn-outline-primary" onClick={submit_form} >Submit</button>
             </form>
