@@ -30,16 +30,16 @@ const Contact = () => {
            Email-id : ${data.email}
            Education : ${data.education}
            Message: ${data.message}`);
+           setusers((prevUsers)=>{
+            return[...prevUsers,data];
+          });
     setData({
       fullname: "",
       message: "",
       education: "",
       email: "",
     });
-    console.log("state updated");
-    setusers((prevUsers)=>{
-      return[...prevUsers,data];
-    });
+
     console.log("list updated");
   }
 
