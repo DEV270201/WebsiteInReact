@@ -1,2 +1,2 @@
-# StartUpWebsiteReact
-tried creating a startup website using React.js
+# WebsiteInReact
+tried creating a website using React.js
