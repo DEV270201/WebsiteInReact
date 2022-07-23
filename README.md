@@ -1,2 +1,4 @@
 # WebsiteInReact
-tried creating a website using React.js
+Tried creating a website using React.js
+Code in the master branch
+
